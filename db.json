@@ -67,17 +67,6 @@
           "registered": "2015-05-03T05:41:52 +03:00"
         },
         {
-          "_id": "62c1dec9db24202e865a10c0",
-          "isActive": false,
-          "age": 39,
-          "name": "Crane Martin",
-          "gender": "male",
-          "email": "cranemartin@hydrocom.com",
-          "phone": "+1 (932) 585-3261",
-          "address": "276 Seaview Avenue, Blandburg, Missouri, 3004",
-          "registered": "2017-01-07T05:28:53 +02:00"
-        },
-        {
           "_id": "62c1dec994bbf440667197c4",
           "isActive": true,
           "age": 27,
