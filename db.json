@@ -1,0 +1,26 @@
+{
+    "users": [
+    {
+      "_id": "62c1dc977b7efddac53ba781",
+      "isActive": false,
+      "age": 35,
+      "name": "Odonnell Benjamin",
+      "gender": "male",
+      "email": "odonnellbenjamin@barkarama.com",
+      "phone": "+1 (834) 583-2253",
+      "address": "190 Lewis Avenue, Churchill, Mississippi, 5228",
+      "registered": "2019-06-14T12:58:32 +03:00"
+    },
+    {
+      "_id": "62c1dc972337a024f4372a00",
+      "isActive": false,
+      "age": 32,
+      "name": "Cathleen Lott",
+      "gender": "female",
+      "email": "cathleenlott@barkarama.com",
+      "phone": "+1 (809) 522-3866",
+      "address": "752 Emerson Place, Gratton, Tennessee, 4033",
+      "registered": "2018-02-01T03:37:06 +02:00"
+    }
+  ]
+}
