@@ -1,6 +1,6 @@
 import axios from "axios";
 import { GetServerSideProps, NextPage } from "next";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 type User = {
     name: string;
@@ -11,7 +11,7 @@ type UserPageProps ={
 }
 
 const url = "https://my-json-server.typicode.com/gitcleber/my-app-nextjs/users"
-const UsersPage: NextPage<UserPageProps> = (props) => {
+const UsersSSRPage: NextPage<UserPageProps> = (props) => {
     // const [users, setUsers] = useState([]);
     // useEffect(()=>{
     //     axios.get(url)
@@ -23,7 +23,7 @@ const UsersPage: NextPage<UserPageProps> = (props) => {
 
     return (
         <div>
-            <h1>UsersPage</h1>
+            <h1>UsersSSRPage</h1>
             <ul>
                 {users.map((user:any, key) => (
                     <li key={key}>{user.name}</li>
@@ -34,7 +34,7 @@ const UsersPage: NextPage<UserPageProps> = (props) => {
     );
 };
 
-export default UsersPage;
+export default UsersSSRPage;
 
 export const getServerSideProps: GetServerSideProps = async () => {
 

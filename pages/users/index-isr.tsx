@@ -1,6 +1,5 @@
 import axios from "axios";
-import { GetServerSideProps, NextPage } from "next";
-import { useEffect, useState } from "react";
+import { GetStaticProps, NextPage } from "next";
 
 type User = {
     name: string;
@@ -8,10 +7,11 @@ type User = {
 
 type UserPageProps ={
     users: User[]
+    date: string;
 }
 
 const url = "https://my-json-server.typicode.com/gitcleber/my-app-nextjs/users"
-const UsersPage: NextPage<UserPageProps> = (props) => {
+const UsersISRPage: NextPage<UserPageProps> = (props) => {
     // const [users, setUsers] = useState([]);
     // useEffect(()=>{
     //     axios.get(url)
@@ -19,11 +19,11 @@ const UsersPage: NextPage<UserPageProps> = (props) => {
 
     // }, []);
 
-    const { users } = props;
+    const { users, date } = props;
 
     return (
         <div>
-            <h1>UsersPage</h1>
+            <h1>UsersPage {date}</h1>
             <ul>
                 {users.map((user:any, key) => (
                     <li key={key}>{user.name}</li>
@@ -34,15 +34,17 @@ const UsersPage: NextPage<UserPageProps> = (props) => {
     );
 };
 
-export default UsersPage;
+export default UsersISRPage;
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
 
     const {data} = await axios.get(url)
 
     return {
         props: {
             users: data,
+            date: new Date().getTime()
         },
+        revalidate: 10
     }   
 } 

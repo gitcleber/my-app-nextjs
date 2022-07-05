@@ -1,5 +1,5 @@
 const UserCreatePage = () => {
-    return <h1>User Create Page</h1>
-}
+    return <h1>UserCreatePage</h1>
+};
 
 export default UserCreatePage;
